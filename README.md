@@ -9,6 +9,7 @@
     <br />
     <a href="https://github.com/anuragverma4895/Portfolio"><strong>Explore the docs »</strong></a>
     <br />
+    <br />
     <a href="https://anuragverma-dev.vercel.app/">View Live Demo</a>
     ·
     <a href="https://github.com/anuragverma4895/Portfolio/issues">Report Bug</a>
