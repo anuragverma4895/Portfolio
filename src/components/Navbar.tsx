@@ -4,14 +4,13 @@ import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
 import "./styles/Navbar.css";
+import { smoother, setSmoother } from "./utils/smootherStore";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
-// eslint-disable-next-line react-refresh/only-export-components
-export let smoother: ScrollSmoother;
 
 const Navbar = () => {
   useEffect(() => {
-    smoother = ScrollSmoother.create({
+    const instance = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
       smooth: 1.7,
@@ -20,9 +19,10 @@ const Navbar = () => {
       autoResize: true,
       ignoreMobileResize: true,
     });
+    setSmoother(instance);
 
-    smoother.scrollTop(0);
-    smoother.paused(true);
+    instance.scrollTop(0);
+    instance.paused(true);
 
     const links = document.querySelectorAll(".header ul a");
     links.forEach((elem) => {
