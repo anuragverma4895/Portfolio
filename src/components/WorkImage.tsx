@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { MdArrowOutward } from "react-icons/md";
+import { useState, useEffect } from "react";
+import { MdArrowOutward, MdArrowBack, MdArrowForward } from "react-icons/md";
 
 interface Props {
-  image: string;
+  images: string[];
   alt?: string;
   video?: string;
   link?: string;
@@ -11,6 +11,8 @@ interface Props {
 const WorkImage = (props: Props) => {
   const [isVideo, setIsVideo] = useState(false);
   const [video, setVideo] = useState("");
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const handleMouseEnter = async () => {
     if (props.video) {
       setIsVideo(true);
@@ -21,24 +23,68 @@ const WorkImage = (props: Props) => {
     }
   };
 
+  const hasMultipleImages = props.images && props.images.length > 1;
+
+  const handlePrev = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev === 0 ? props.images.length - 1 : prev - 1));
+  };
+
+  const handleNext = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev === props.images.length - 1 ? 0 : prev + 1));
+  };
+
+  useEffect(() => {
+    if (!hasMultipleImages) return;
+
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev === props.images.length - 1 ? 0 : prev + 1));
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [hasMultipleImages, props.images]);
+
   return (
     <div className="work-image">
-      <a
+      <div
         className="work-image-in"
-        href={props.link}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={() => setIsVideo(false)}
-        target="_blank"
         data-cursor={"disable"}
       >
         {props.link && (
-          <div className="work-link">
+          <a href={props.link} target="_blank" rel="noopener noreferrer" className="work-link" title="View Project Image">
             <MdArrowOutward />
-          </div>
+          </a>
         )}
-        <img src={props.image} alt={props.alt} />
+        <img
+          src={props.images && props.images.length > 0 ? props.images[currentImageIndex] : ""}
+          alt={props.alt}
+        />
         {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
-      </a>
+
+        {hasMultipleImages && (
+          <>
+            <button
+              className="inner-carousel-arrow inner-carousel-arrow-left"
+              onClick={handlePrev}
+              aria-label="Previous project image"
+            >
+              <MdArrowBack />
+            </button>
+            <button
+              className="inner-carousel-arrow inner-carousel-arrow-right"
+              onClick={handleNext}
+              aria-label="Next project image"
+            >
+              <MdArrowForward />
+            </button>
+          </>
+        )}
+      </div>
     </div>
   );
 };

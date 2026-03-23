@@ -2,38 +2,41 @@ import { useState, useCallback } from "react";
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
     title: "Payment Gateway",
     category: "Payment Processing System",
     tools: "Node.js, Express.js, MongoDB, Auth",
-    image: "/images/Solidx.png",
+    images: ["/images/payment1.png", "/images/payment2.png", "/images/payment3.png"],
+    github: "https://github.com/anuragverma4895/payment-processing-system",
+    live: "https://anuragverma-dev.vercel.app/"
   },
   {
-    title: "E-Commerce Store",
+    title: "E-Commerce Tech Store",
     category: "Full Stack E-Commerce",
     tools: "React.js, Node.js, Express.js, MongoDB",
-    image: "/images/radix.png",
+    images: ["/images/ecommerce1.png", "/images/ecommerce2.png", "/images/ecommerce3.png"],
+    github: "https://github.com/anuragverma4895/Ecommerce-Tech-Store",
+    live: "https://ecommerce-tech-store-seven.vercel.app/"
   },
   {
     title: "Social Media Platform",
     category: "Social Networking App",
     tools: "React.js, Node.js, MongoDB, JWT Auth",
-    image: "/images/bond.png",
+    images: ["/images/SocialMedia1.png", "/images/SocialMedia2.png", "/images/SocialMedia3.png"],
+    github: "https://github.com/anuragverma4895/Social-Media-Platform",
+    live: "https://social-media-platform-six-taupe.vercel.app/login"
   },
   {
     title: "Research Grant System",
     category: "Grant Management Portal",
     tools: "PHP, MySQL, HTML, CSS",
-    image: "/images/sapphire.png",
-  },
-  {
-    title: "Infinite Scroll Feed",
-    category: "Content Feed App",
-    tools: "HTML, JavaScript, REST APIs",
-    image: "/images/Maxlife.png",
-  },
+    images: ["/images/GrantManagement1.png", "/images/GrantManagement2.png", "/images/GrantManagement3.png"],
+    github: "https://github.com/anuragverma4895/Research-Grant-Management-System",
+    live: "https://grant-management-system.infinityfreeapp.com/?i=1"
+  }
 ];
 
 const Work = () => {
@@ -114,8 +117,20 @@ const Work = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="carousel-image-wrapper">
-                      <WorkImage image={project.image} alt={project.title} />
+                    <div className="carousel-image-wrapper" style={{ flexDirection: 'column' }}>
+                      <WorkImage images={project.images} alt={project.title} />
+                      <div className="project-links">
+                        {project.github && (
+                          <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-button project-button-github">
+                            GitHub <FaGithub />
+                          </a>
+                        )}
+                        {project.live && (
+                          <a href={project.live} target="_blank" rel="noopener noreferrer" className="project-button project-button-live">
+                            Live App <FaExternalLinkAlt />
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>

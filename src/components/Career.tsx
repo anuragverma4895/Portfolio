@@ -1,4 +1,5 @@
 import "./styles/Career.css";
+import { FaStar } from "react-icons/fa";
 
 const Career = () => {
   return (
@@ -29,13 +30,13 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>LeetCode — 500+ Problems</h4>
+                <h4>LeetCode — 600+ Problems</h4>
                 <h5>Competitive Programming</h5>
               </div>
-              <h3>1600+</h3>
+              <h3>1700+</h3>
             </div>
             <p>
-              Solved 500+ problems on LeetCode with a rating of 1600+.
+              Solved 600+ problems on LeetCode with a rating of 1700+.
               Strong foundation in Data Structures, Algorithms, and problem-solving
               across a wide range of topics.
             </p>
@@ -43,15 +44,31 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>CodeChef — 1500+ Rating</h4>
+                <h4>CodeChef — 1600+ Rating</h4>
+                <h5>Competitive Programming</h5>
+              </div>
+              <h3 style={{ display: "flex", gap: "4px", alignItems: "center" }}>
+                <FaStar color="#FFD700" />
+                <FaStar color="#FFD700" />
+                <FaStar color="#FFD700" />
+              </h3>
+            </div>
+            <p>
+              Achieved 1600+ rating (3 Star) and solved 300+ problems on CodeChef. Actively participating in
+              contests and consistently improving skills in competitive
+              programming and algorithmic thinking.
+            </p>
+          </div>
+          <div className="career-info-box">
+            <div className="career-info-in">
+              <div className="career-role">
+                <h4>Codeforces — 1200+ Rating</h4>
                 <h5>Competitive Programming</h5>
               </div>
               <h3>NOW</h3>
             </div>
             <p>
-              Achieved 1500+ rating on CodeChef. Actively participating in
-              contests and consistently improving skills in competitive
-              programming and algorithmic thinking.
+              Achieved 1200+ rating on Codeforces. Consistently participating in contests to enhance algorithmic problem-solving logic.
             </p>
           </div>
         </div>
