@@ -17,7 +17,7 @@ const projects = [
     title: "E-Commerce Tech Store",
     category: "Full Stack E-Commerce",
     tools: "React.js, Node.js, Express.js, MongoDB",
-    images: ["/images/ecommerce1.png", "/images/ecommerce2.png", "/images/ecommerce3.png"],
+    images: ["/images/TechStore1.png", "/images/TechStore2.png", "/images/TechStore3.png", "/images/TechStore4.png", "/images/TechStore5.png"],
     github: "https://github.com/anuragverma4895/Ecommerce-Tech-Store",
     live: "https://ecommerce-tech-store-seven.vercel.app/"
   },
