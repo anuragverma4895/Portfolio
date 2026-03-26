@@ -25,7 +25,7 @@ const projects = [
     title: "Social Media Platform",
     category: "Social Networking App",
     tools: "React.js, Node.js, MongoDB, JWT Auth",
-    images: ["/images/SocialMedia1.png", "/images/SocialMedia2.png", "/images/SocialMedia3.png"],
+    images: ["/images/SocialMedia1.png", "/images/SocialMedia2.png", "/images/SocialMedia3.png", "/images/SocialMedia4.png", "/images/SocialMedia5.png"],
     github: "https://github.com/anuragverma4895/Social-Media-Platform",
     live: "https://social-media-platform-six-taupe.vercel.app/login"
   },
@@ -33,7 +33,7 @@ const projects = [
     title: "Research Grant System",
     category: "Grant Management Portal",
     tools: "PHP, MySQL, HTML, CSS",
-    images: ["/images/GrantManagement1.png", "/images/GrantManagement2.png", "/images/GrantManagement3.png"],
+    images: ["/images/GrantManagement1.png", "/images/GrantManagement2.png", "/images/GrantManagement3.png", "/images/GrantManagement4.png"],
     github: "https://github.com/anuragverma4895/Research-Grant-Management-System",
     live: "https://grant-management-system.infinityfreeapp.com/?i=1"
   }
