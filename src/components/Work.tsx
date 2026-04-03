@@ -6,6 +6,34 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
+    title: "AI Short Video Ads Generator",
+    category: "AI Video Generation Tool",
+    tools: "React.js, Node.js, Gemini AI, Cloudinary, Clerk",
+    images: [
+      "/images/AI-Short-Video-Ads-Generator1.png",
+      "/images/AI-Short-Video-Ads-Generator2.png",
+      "/images/AI-Short-Video-Ads-Generator3.png",
+      "/images/AI-Short-Video-Ads-Generator4.png",
+      "/images/AI-Short-Video-Ads-Generator5.png",
+    ],
+    github: "https://github.com/anuragverma4895/AI-Short-Video-Ads-Generator",
+    live: "",
+  },
+  {
+    title: "Video Calling Interview Platform",
+    category: "Remote Interview System",
+    tools: "React.js, Node.js, MongoDB, Socket.io, WebRTC",
+    images: [
+      "/images/video-calling-interview-platform1.png",
+      "/images/video-calling-interview-platform2.png",
+      "/images/video-calling-interview-platform3.png",
+      "/images/video-calling-interview-platform4.png",
+      "/images/video-calling-interview-platform5.png",
+    ],
+    github: "https://github.com/anuragverma4895/Video-Calling-Interview-Platform",
+    live: "https://video-calling-interview-platform-pjna.onrender.com/",
+  },
+  {
     title: "Payment Gateway",
     category: "Payment Processing System",
     tools: "Node.js, Express.js, MongoDB, Auth",

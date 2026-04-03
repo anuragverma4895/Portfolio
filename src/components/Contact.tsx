@@ -14,6 +14,12 @@ const Contact = () => {
                 anuragverma4895@gmail.com
               </a>
             </p>
+            <h4>Mobile</h4>
+            <p>
+              <a href="tel:+918874096365" data-cursor="disable">
+                +918874096365
+              </a>
+            </p>
             <h4>Education</h4>
             <p>B.Tech in CSE (AI) — NIET Greater Noida</p>
           </div>

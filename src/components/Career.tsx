@@ -44,7 +44,7 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>CodeChef — 1600+ Rating</h4>
+                <h4>CodeChef — 1660 Rating</h4>
                 <h5>Competitive Programming</h5>
               </div>
               <h3 style={{ display: "flex", gap: "4px", alignItems: "center" }}>
@@ -54,7 +54,7 @@ const Career = () => {
               </h3>
             </div>
             <p>
-              Achieved 1600+ rating (3 Star) and solved 300+ problems on CodeChef. Actively participating in
+              Achieved 1660 rating (3 Star) and solved 300+ problems on CodeChef. Actively participating in
               contests and consistently improving skills in competitive
               programming and algorithmic thinking.
             </p>
