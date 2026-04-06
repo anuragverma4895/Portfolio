@@ -27,7 +27,7 @@ const projects = [
     tools: "Node.js, Express.js, MongoDB, Auth",
     images: ["/images/payment1.png", "/images/payment2.png", "/images/payment3.png"],
     github: "https://github.com/anuragverma4895/payment-processing-system",
-    live: "https://anuragverma-dev.vercel.app/"
+    live: "https://payment-processing-system-theta.vercel.app/"
   },
   {
     title: "E-Commerce Tech Store",
