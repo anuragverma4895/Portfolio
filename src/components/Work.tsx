@@ -11,7 +11,7 @@ const projects = [
     tools: "React.js, Node.js, Gemini AI, Cloudinary, Clerk",
     images: ["/images/AI-Short-Video-Ads-Generator1.png", "/images/AI-Short-Video-Ads-Generator2.png", "/images/AI-Short-Video-Ads-Generator3.png", "/images/AI-Short-Video-Ads-Generator4.png", "/images/AI-Short-Video-Ads-Generator5.png"],
     github: "https://github.com/anuragverma4895/AI-Short-Video-Ads-Generator",
-    live: ""
+    live: "https://ai-short-video-ads-generator.onrender.com/"
   },
   {
     title: "Video Calling Interview Platform",
